@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>RAI</title>
+    <link rel="shortcut icon" href="TemplateData/faviconrai.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL v14.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+      #confirm
+      {
+        font-family: sans-serif;
+        background-color: #ffffff;
+        border: 1px solid #3e3e3e;;
+        color: black;
+        display: none;
+        position: absolute;
+        top: 20%;
+        width: 430px;
+        left: 48%;
+        margin-left: -150px;
+        padding: 6px 8px 8px;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 8px;
+      }
+      #confirm button {
+        font-family: sans-serif;
+        background-color: white;
+         display: inline-block;
+         border-radius: 5px;
+         padding: 5px;
+         text-align: center;
+         width: 100px;
+         border: 1px solid;
+         cursor: pointer;
+      }
+      #confirm .message
+      {
+        font-family: sans-serif;
+         text-align: left;
+      }
+   </style>
+  </head>
+  <body>
+    <div class="webgl-content">
+     <div id="unityContainer" style="width: 100%; height: 100%"> <p> "please keep mouse  here"</div>
+      <!-- <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">RAI</div>
+      </div> -->
+    </div>
+    </div>
+    <div id="confirm">
+      <div style="margin-top: 12px; margin-bottom: 16px;" class="message"></div>
+      <button style="margin-left: 200px;" class="no">Dismiss</button>
+      <button style="float: right; background-color: blue; color: white; outline: 1px #db592b; border: blue; font-weight: bold;" class="yes">Enable Now</button>
+   </div>
+
+    <script style="font-weight: bold;" src="TemplateData/browserAccelaration.js"></script>
+
+  </body>
+</html>
